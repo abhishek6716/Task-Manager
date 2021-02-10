@@ -10,14 +10,42 @@ app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
 
-
 // const router = new express.Router()
 // router.get('/test', (req, res) => {
 //     res.send('This is from other router')
 // })
 // app.use(router)
 
-
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
+
+
+
+// const bcrypt = require('bcryptjs')
+
+// const myfxn = async () => {
+//     const password = 'ab67162285'
+//     const hashedPassword = await bcrypt.hash(password, 8)
+
+//     console.log(password)
+//     console.log(hashedPassword)
+
+//     const isMatched = await bcrypt.compare('ab67162285', hashedPassword)
+//     console.log(isMatched)
+// }
+
+// myfxn()
+
+
+// const jwt = require('jsonwebtoken')
+
+// const myfxn = async () => {
+//     const token = jwt.sign({ _id: 'abcd123' }, 'mynameisabhishek', { expiresIn: '7 days' })
+//     console.log(token)
+
+//     const data = jwt.verify(token, 'mynameisabhishek')
+//     console.log(data)
+// }
+
+// myfxn()
