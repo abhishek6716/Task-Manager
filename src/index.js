@@ -61,3 +61,26 @@ app.listen(port, () => {
 // }
 
 // myfxn()
+
+// const pet = {
+//     name: 'n1'
+// }
+// pet.toJSON = function () {
+//     return {}
+// }
+// console.log(JSON.stringify(pet))
+
+const Task = require('./models/task')
+const User = require('./models/user')
+
+const main = async () => {
+    // const task = await Task.findById('6027e2a8cb58372b20e8d25e')
+    // await task.populate('owner').execPopulate()
+    // console.log(task.owner)
+
+    const user = await User.findById('6027dcd681ac4a33fc982476')
+    await user.populate('tasks').execPopulate()
+    console.log(user.tasks)
+}
+
+main()
